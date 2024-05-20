@@ -11,7 +11,8 @@ const users = express.Router();
 users.use(express.json());
 users.use(cookieParser());
 
-const deta = Deta(process.env.DETA_PROJECT_KEY);
+//const deta = Deta(process.env.DETA_PROJECT_KEY);
+const deta = Deta();
 
 const users_db = deta.Base("users_db");
 const sessions_db = deta.Base("sessions_db");

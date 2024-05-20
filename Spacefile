@@ -6,3 +6,9 @@ micros:
     engine: nodejs16
     primary: true
     dev: npm run dev
+    public: true
+    presets:
+      env:
+        - name: AUTHORIZATION
+          description: Autorization token
+          default: ""

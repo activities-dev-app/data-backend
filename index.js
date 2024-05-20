@@ -1,10 +1,17 @@
 import express from "express";
 import api from "./api/index.js";
 import users from "./users/index.js";
+import cors from "cors";
 
 const port = process.env.PORT || 4000;
 
 const app = express();
+
+app.use(express.json());
+
+app.use(cors({
+    origin: "http://localhost:3000/",
+}));
 
 app.use((req, res, next) => {
     //console.log(

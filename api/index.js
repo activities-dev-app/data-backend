@@ -4,7 +4,8 @@ import { Deta } from "deta";
 const api = express.Router();
 api.use(express.json());
 
-const deta = Deta(process.env.DETA_PROJECT_KEY);
+//const deta = Deta(process.env.DETA_PROJECT_KEY);
+const deta = Deta();
 
 const categories_db = deta.Base("categories_db");
 const activities_db = deta.Base("activities_db");
